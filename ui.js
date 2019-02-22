@@ -13,6 +13,20 @@ class UI {
     `
   }
 
+  showRepos(repos) {
+    let output = '';
+    
+    repos.forEach(function(repo) {
+      output += `
+        <div class="card card-body mb-3">
+          <div class="row">
+            <h1>${repo.name}</h1>
+          </div>
+        </div>
+      `;
+    });
+  }
+
   clearProfile() {
     this.profile.innerHTML = '';
   }
